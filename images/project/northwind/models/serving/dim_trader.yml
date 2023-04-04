@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: dim_trader
+    tests:
+    - dbt_expectations.expect_table_row_count_to_equal_other_table:
+        compare_model: ref("stg_employee_territories2")
+    columns:
+      - name: trader_key
+        description: The surrogate key of the trader/employee
+        tests:
+          - unique
+          - not_null
+
+      - name: trader_id
+        description: The natural key of the trader/employee
+        tests:
+          - unique
+          - not_null
+          
+      - name: trader_fullname
+        description: The full name of the trader
+
+      - name: trader_birth_date
+      - name: trader_city
+      - name: trader_country
+      - name: trader_extension
+      - name: trader_hire_date
+      - name: trader_home_phone
+      - name: trader_notes
+      - name: trader_photo
+      - name: trader_photo_path
+      - name: trader_postal_code
+      - name: trader_region
+      - name: trader_reports      
+      - name: trader_title
+      - name: trader_title_of_courtesy
+      - name: trader_territory_id
+      - name: trader_territory_description
+      - name: trader_region_id
+      - name: territory_id

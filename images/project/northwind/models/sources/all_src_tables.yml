@@ -1,0 +1,323 @@
+version: 2
+sources:
+  - name: airbyte_schema
+    database: airbyte_database  
+    tables:
+
+      - name: categories
+        description: ''
+        columns:
+          - name: category_id
+            description: ''
+            tests:
+              - unique
+              - not_null
+          - name: category_name
+            description: ''
+            tests: null
+          - name: description
+            description: ''
+            tests: null
+          - name: picture
+            description: ''
+            tests: null
+
+      - name: customers
+        description: ''
+        columns:
+          - name: customer_id
+            description: ''
+            tests:
+              - unique
+              - not_null
+          - name: address
+            description: ''
+            tests: null
+          - name: city
+            description: ''
+            tests: null
+          - name: company_name
+            description: ''
+            tests: null
+          - name: contact_name
+            description: ''
+            tests: null
+          - name: contact_title
+            description: ''
+            tests: null
+          - name: country
+            description: ''
+            tests: null
+          - name: fax
+            description: ''
+            tests: null
+          - name: phone
+            description: ''
+            tests: null
+          - name: postal_code
+            description: ''
+            tests: null
+          - name: region
+            description: ''
+            tests: null
+
+      - name: employees
+        description: ''
+        columns:
+          - name: employee_id
+            description: ''
+            tests:
+              - unique
+              - not_null
+          - name: address
+            description: ''
+            tests: null
+          - name: birth_date
+            description: ''
+            tests: null
+          - name: city
+            description: ''
+            tests: null
+          - name: country
+            description: ''
+            tests: null
+          - name: extension
+            description: ''
+            tests: null
+          - name: first_name 
+            description: ''
+            tests: null
+          - name: hire_date
+            description: ''
+            tests: null
+          - name: home_phone
+            description: ''
+            tests: null
+          - name: last_name
+            description: ''
+            tests: null
+          - name: notes
+            description: ''
+            tests: null
+          - name: photo
+            description: ''
+            tests: null
+          - name: photo_path 
+            description: ''
+            tests: null
+          - name: postal_code
+            description: ''
+            tests: null
+          - name: region
+            description: ''
+            tests: null
+          - name: reports_to
+            description: ''
+            tests: null
+          - name: title
+            description: ''
+            tests: null
+          - name: title_of_courtesy
+            description: ''
+            tests: null
+      
+      - name: orders
+        description: ''
+        columns:
+          - name: order_id
+            description: ''
+            tests:
+              - unique
+              - not_null
+          - name: customer_id
+            description: ''
+            tests: null
+          - name: employee_id
+            description: ''
+            tests: null  
+          - name: required_date
+            description: ''
+            tests: null
+          - name: shipped_date
+            description: ''
+            tests: null
+          - name: ship_address
+            description: ''
+            tests: null
+          - name: ship_city
+            description: ''
+            tests: null
+          - name: ship_country
+            description: ''
+            tests: null
+          - name: ship_name
+            description: ''
+            tests: null
+          - name: ship_postal_code
+            description: ''
+            tests: null
+          - name: ship_region
+            description: ''
+            tests: null
+          - name: ship_via
+            description: ''
+            tests: null
+          
+
+      - name: order_details
+        description: ''
+        columns:
+          - name: order_id
+            description: ''
+            tests:
+              - not_null
+          - name: product_id
+            description: ''
+            tests: null
+          - name: quantity
+            description: ''
+            tests: null
+          - name: unit_price
+            description: ''
+            tests: null 
+          - name: discount
+            description: ''
+            tests: null 
+
+      - name: products
+        description: ''
+        columns:
+          - name: product_id
+            description: ''
+            tests:
+              - unique
+              - not_null
+          - name: category_id
+            description: ''
+            tests: null
+          - name: product_name
+            description: ''
+            tests: null
+          - name: quantity_per_unit
+            description: ''
+            tests: null
+          - name: discontinued
+            description: ''
+            tests: null
+          - name: reorder_level
+            description: ''
+            tests: null
+          - name: supplier_id
+            description: ''
+            tests: null
+          - name: units_in_stock
+            description: ''
+            tests: null
+          - name: units_on_order
+            description: ''
+            tests: null
+          - name: unit_price
+            description: ''
+            tests: null
+
+      - name: shippers
+        description: ''
+        columns:
+          - name: shipper_id
+            description: ''
+            tests:
+              - unique
+              - not_null
+          - name: company_name
+            description: ''
+            tests: null
+          - name: phone
+            description: ''
+            tests: null
+
+
+      - name: suppliers
+        description: ''
+        columns:
+          - name: supplier_id
+            description: ''
+            tests:
+              - unique
+              - not_null
+          - name: region
+            description: ''
+            tests: null
+          - name: postal_code
+            description: ''
+            tests: null
+          - name: address
+            description: ''
+            tests: null
+          - name: city
+            description: ''
+            tests: null
+          - name: company_name
+            description: ''
+            tests: null
+          - name: contact_name
+            description: ''
+            tests: null
+          - name: contact_title
+            description: ''
+            tests: null
+          - name: country
+            description: ''
+            tests: null
+          - name: fax
+            description: ''
+            tests: null
+          - name: homepage
+            description: ''
+            tests: null
+          - name: phone
+            description: ''
+            tests: null
+
+      - name: territories
+        description: ''
+        columns:
+          - name: territory_id
+            description: ''
+            tests:
+              - unique
+              - not_null
+          - name: region_id
+            description: ''
+            tests: null
+          - name: territory_description
+            description: ''
+            tests: null
+
+      - name: us_states
+        description: ''
+        columns:
+          - name: state_id
+            description: ''
+            tests:
+              - unique
+              - not_null
+          - name: state_name
+            description: ''
+            tests: null
+          - name: state_abbr
+            description: ''
+            tests: null
+          - name: state_region
+            description: ''
+            tests: null
+
+
+      - name: employee_territories
+        description: ''
+        columns:
+          - name: employee_id
+            description: ''
+            tests: null
+          - name: territories_id
+            description: ''
+            tests: null

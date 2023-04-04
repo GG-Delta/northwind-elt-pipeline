@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: dim_product
+    tests:
+    - dbt_expectations.expect_table_row_count_to_equal_other_table:
+        compare_model: ref("stg_products")
+    columns:
+      - name: product_key
+        description: The surrogate key of the product
+        tests:
+          - unique
+          - not_null
+
+      - name: product_id
+        description: The natural key of the product
+        tests:
+          - not_null
+          - unique
+          
+      - name: product_category_id
+        description: The id of the given product category
+      
+      - name: product_name
+        tests:
+          - dbt_expectations.expect_column_to_exist
+      - name: product_quantity_per_unit
+      - name: product_discontinued
+      - name: product_reorder_level
+      - name: product_supplier_id
+      - name: product_units_in_stock
+      - name: product_units_on_order
+      - name: product_unit_price
+      - name: product_category_category_id
+      - name: product_category_name
+      - name: product_category_description
+      - name: product_category_picture

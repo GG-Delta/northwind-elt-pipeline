@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: dim_supplier
+    tests: null
+    columns:
+      - name: supplier_key
+        description: The surrogate key of the supplier
+        tests: null
+
+      - name: supplier_id
+        description: The natural key of the supplier
+        tests: null
+          
+      - name: supplier_region
+        description: The name of the region of the supplier
+
+      - name: supplier_postal_code
+      - name: supplier_address
+      - name: supplier_city
+      - name: supplier_company_name
+      - name: supplier_contact_name
+      - name: supplier_contact_title
+      - name: supplier_country
+      - name: supplier_fax
+      - name: supplier_homepage
+      - name: supplier_phone
+      - name: product_id
