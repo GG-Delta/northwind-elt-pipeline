@@ -30,5 +30,9 @@ The outcome of the dimensional modeling is summarized by the Entity Relationship
 
 ![](images/ERD.png)
 
+## Example Dashboard (based on semantic layer): Preset
+
+ ![](images/Dashboard_Preset.png)
+
 ## Current Code Repository
 The code elements shared within this repository reflect the data transformation and modeling part of the pipline that was realized within dbt connected to Snowflake serving as data warehouse.
