@@ -9,7 +9,7 @@ The goal of the data pipline is to provide records of business transactions to B
 + What are the top 10 countries that enable these trades?
 
 ## Consumers 
-The intented consumers are BI analysts that will consume the data via a given BI tool. In the current project the data will be dilvered to be used inside the Open Source BI Platform [**Preset**](https://preset.io/). In fact, the final outcome of the dimensional modeling will be a fact table and several dimensional tables characterizing the business event of "placing an order". In addition, we will have a single table housing all data in a single large table in the fashion of OTB (one big table).
+The intented consumers are BI analysts that will consume the data via a given BI tool. In the current project the data will be delivered to be used inside the Open Source BI Platform [**Preset**](https://preset.io/). In fact, the final outcome of the dimensional modeling will be a fact table and several dimensional tables characterizing the business event of "placing an order". In addition, we will have a single table housing all data in a single large table in the fashion of OTB (one big table).
 
 ## Source dataset
 The database used in this project represents a classic database that was originally created by Microsoft containing sales data of a fictitious company called “Northwind Traders”: https://github.com/pthom/northwind_psql
